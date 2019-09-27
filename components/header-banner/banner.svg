@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svgRoot" class="bannerSvg" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="linearGradient6904" x1="16.39" x2="138.4" y1="193.1" y2="151.2" gradientTransform="matrix(3.233 -1.862 1.867 3.225 166.8 113.8)" gradientUnits="userSpaceOnUse">
+      <stop style="stop-color:#fff;stop-opacity:.09091" offset="0"/>
+      <stop style="stop-color:#fff;stop-opacity:0" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g>
+    <rect x="-1440" y="2.153e-6" width="3840" height="600" style="fill:#003380"/>
+    <path d="m578 5.817e-6 318.8 600h1503v-597.6z" style="fill-opacity:.03478;fill:#fff"/>
+    <path d="m1494 3.96e-8 -1138 600h1138z" style="fill:url(#linearGradient6904)"/>
+  </g>
+  <g>
+    <path d="m1493 0.4423-1137 599.6" style="fill:none;stroke-width:.5;stroke:#80b3ff"/>
+    <path d="m578.5-0.5 318 603" style="fill:none;stroke-width:.5;stroke:#80b3ff"/>
+    <path d="m773.4 379.8a5 5 0 0 1 2.141-6.719" style="fill:none;stroke-width:.5;stroke:#80b3ff"/>
+    <text x="759.96027" y="376.30603" style="fill:#80b3ff;font-family:sans-serif;font-size:5.907px;letter-spacing:0px;line-height:1.25;word-spacing:0px" xml:space="preserve"><tspan x="759.96027" y="376.30603" style="fill:#80b3ff">90°</tspan></text>
+  </g>
+  <g transform="translate(0 -138.2)">
+    <path d="m960 658.2c-126.1 69.39-112.7 90.73-365.1 60.99-124.6-14.68-310.1-40.5-594.9-72.28v91.29h960z" style="fill:#fff"/>
+  </g>
+</svg>
