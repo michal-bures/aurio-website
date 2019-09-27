@@ -19,27 +19,25 @@ export const Header = () => {
     );
 
 
-    function handleMouseMove(event: SyntheticEvent<HTMLDivElement,MouseEvent>) {
+    function handleMouseMove(event: SyntheticEvent<HTMLDivElement, MouseEvent>) {
         const maskElement = document.getElementById('maskSpotlightCircle') as any as SVGCircleElement;
         const svg = document.getElementById('svgRoot') as any as SVGSVGElement;
-        console.log("MOUSEMOVE", maskElement.getAttribute('transform'));
 
-            const pt = svg.createSVGPoint();
+        const pt = svg.createSVGPoint();
 
-            let relX = event.nativeEvent.pageX;
-            let relY = event.nativeEvent.pageY;
+        let relX = event.nativeEvent.pageX;
+        let relY = event.nativeEvent.pageY;
 
-            pt.x = relX;
-            pt.y = relY;
-            const svgP = pt.matrixTransform(svg.getScreenCTM()!.inverse());
+        pt.x = relX;
+        pt.y = relY;
+        const svgP = pt.matrixTransform(svg.getScreenCTM()!.inverse());
 
-            relX = svgP.x - 240;
-            relY = svgP.y - 200;
+        relX = svgP.x - 240;
+        relY = svgP.y - 200;
 
 
-            maskElement.setAttribute('transform', `translate(${relX},${relY})`);
-            //document.getElementById('debugSpotlightCircle')!.setAttribute('transform', `translate(${relX},${relY})`);
-
+        maskElement.setAttribute('transform', `translate(${relX},${relY})`);
+        //document.getElementById('debugSpotlightCircle')!.setAttribute('transform', `translate(${relX},${relY})`);
     }
 };
 

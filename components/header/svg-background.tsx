@@ -32,7 +32,7 @@ export const AbstractBackground = () => (
             <linearGradient
                 id="a"
                 x1="16.39"
-                x2="138.4"
+                x2="180.4"
                 y1="193.1"
                 y2="151.2"
                 gradientTransform="matrix(3.233 -1.862 1.867 3.225 166.8 113.8)"
