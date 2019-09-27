@@ -40,7 +40,7 @@ export const Heading = styled.div`
 `;
 
 export const ButtonLayout = styled.div`
-    padding-top: 50px;
+    padding-top: 34px;
     flex: 1;
     flex-direction: column;
 `;

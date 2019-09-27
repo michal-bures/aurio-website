@@ -3,7 +3,7 @@ export const theme = {
     headerBanner: {
         height: 600,
     },
-    minBannerWidth: 700,
+    minBannerWidth: 960,
 };
 
 

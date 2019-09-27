@@ -1,14 +1,14 @@
-import {HeaderBanner} from '../components/header-banner/header-banner';
 import * as React from 'react';
 import styled from 'styled-components';
 import {Layout} from '../components/layout';
+import {Header} from '../components/header/header';
 
 
 const Home = () => {
 
     return (
         <div>
-            <HeaderBanner/>
+            <Header/>
             <Layout>
                 <style jsx global>{`
               body {
@@ -25,9 +25,5 @@ const Home = () => {
         </div>
     );
 };
-
-const StyleTest = styled.h1`
-      color: red;
-`;
 
 export default Home;
