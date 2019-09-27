@@ -1,16 +1,17 @@
 import styled from 'styled-components';
 import {PropsWithChildren} from 'react';
+import {theme} from '../theme';
 
 export const Layout = (props: PropsWithChildren<{}>) => {
     return (
-        <FixedWithContainer>
+        <ContentContainer>
             {props.children}
-        </FixedWithContainer>
+        </ContentContainer>
     );
 };
 
 
-export const FixedWithContainer = styled.div`
-    max-width: 960px;
+export const ContentContainer = styled.div`
+    max-width: ${theme.contentWidth}px;
     margin:auto;  
 `;

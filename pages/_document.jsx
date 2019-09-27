@@ -24,6 +24,7 @@ export default class MyDocument extends Document {
             <html>
             <Head>
                 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css' />
+                <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"/>
                 {/* Step 5: Output the styles in the head  */}
                 {this.props.styleTags}
 

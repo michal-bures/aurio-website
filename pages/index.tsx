@@ -11,7 +11,8 @@ const Home = () => {
             <HeaderBanner/>
             <Layout>
                 <style jsx global>{`
-              body { 
+              body {
+                font-family: 'Roboto', sans-serif;
               }
             `}</style>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum, ex quis consequat varius,

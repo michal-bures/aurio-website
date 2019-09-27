@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export function SvgCutoff() {
     return (
-        <StyledSvg viewBox="0 0 960 600" preserveAspectRatio="none"
-            xmlns="http://www.w3.org/2000/svg"
-            version="1.1"
+        <StyledSvg viewBox={`0 0 960 600`} preserveAspectRatio="none"
+                   xmlns="http://www.w3.org/2000/svg"
+                   version="1.1"
         >
             <g>
                 <path
