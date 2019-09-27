@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<html version="5">
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<style>
+    body {
+        margin: 0;
+    }
+
+    .bg {
+        width: 100%;
+        height: 700px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: inline-block;
+        oveflow: hidden;
+    }
+
+    #techBackground {
+        display: inline;
+        opacity: 1;
+        vector-effect: none;
+        fill: #003380;
+        fill-opacity: 1;
+        stroke: none;
+    }
+
+    #cutoff {
+        opacity: 1;
+        fill: white;
+        fill-opacity: 1;
+        stroke: none;
+
+    }
+
+    #bgShape1 {
+        display: inline;
+        opacity: 1;
+        vector-effect: none;
+        fill: #ffffff;
+        fill-opacity: 0.03478262;
+        stroke: none;
+    }
+
+    #bgShape2 {
+        display: inline;
+        opacity: 1;
+        vector-effect: none;
+        fill: url(#linearGradient7684);
+        fill-opacity: 1;
+        stroke: none;
+    }
+
+    .guideline {
+        stroke: #abafff;
+        stroke-width: 0.05;
+        stroke-opacity: 1;
+        fill: none;
+    }
+
+    .techText {
+        fill: #abafff;
+        fill-opacity: 1;
+        font-family: Verdana;
+        font-size: 1px;
+    }
+
+    svg {
+        position: absolute;
+    }
+</style>
+
+
+<div class="bg">
+    <svg x="0px" y="0px" style="width: 100%; height: 500px">
+        <svg viewBox="0 0 210 140" preserveAspectRatio="none" >
+            <defs id="defs7785">
+                <linearGradient
+                        y2="148.52051"
+                        x2="137.38121"
+                        y1="192.03522"
+                        x1="0.53888869"
+                        gradientTransform="rotate(-30,6.3922553,1.1428552)"
+                        gradientUnits="userSpaceOnUse"
+                        id="linearGradient7684"
+                        xlink:href="#bsShape2Gradient" />
+                <linearGradient
+                        id="bsShape2Gradient">
+                    <stop
+                            id="stop1061"
+                            offset="0"
+                            style="stop-color:#ffffff;stop-opacity:0.09090909" />
+                    <stop
+                            id="stop1063"
+                            offset="1"
+                            style="stop-color:#ffffff;stop-opacity:0;" />
+                </linearGradient>
+            </defs>
+
+
+            <g id="baseLayer" x="0" y="0" class="one" width="100%" height="500">
+                <!--            <rect id="technical" x="0" y="0" class="one" mask="url(#mask)" width="100%" height="500">
+                            </rect>-->
+                <rect width="210" height="140"
+                        id="techBackground"
+                />
+            </g>
+        </svg>
+        <svg id="bgArt" x="0px" y="0px" width="100%" height="100%" viewBox="100 50 100 50" preserveAspectRatio="xMidYMid slice">
+            <path
+                    id="bgShape1"
+                    d="M 120,0 194,122 410,122 410,0 Z"/>
+            <path
+                    id="bgShape2"
+                    d="M 210,50 85,140 210,140 Z"/>
+            <mask id="techyOverlayMask">
+                <rect width="100%" height="500px" x="0" y="0" fill="black"/>
+                <g transform="translate(0, 0)">
+                    <circle cx="50" cy="50" r="8" fill="white"/>
+                </g>
+            </mask>
+            <g id="techyOverlay" mask="url(#techyOverlayMask)">
+                <path d="M 100,100 H 50 V 50 Z" style="fill-opacity:1; fill-color: green"></path>
+                <path id="bgShape1line" class="guideline" d="M 120,0 194,122"/>
+                <path id="bgShape2line" class="guideline" d="M 210,50 85,140"/>
+                <path class="guideline" d="M 0,70 H 500"/>
+                <path class="guideline" d="M 0,85 H 500"/>
+                <path class="guideline" d="M 120,0 V 100"/>
+                <text x="165" y="80" class="techText">90°</text>
+            </g>
+        </svg>
+        <svg viewBox="0 0 210 140" preserveAspectRatio="none" >
+
+            <g id="cutOff" x="0" y="0" width="100%" height="500">
+                <!--            <rect id="technical" x="0" y="0" class="one" mask="url(#mask)" width="100%" height="500">
+                            </rect>-->
+                <path
+                        id="cutoff"
+                        d="M 0,500 H 210 L 210,112 C 161,140 164,140 0,104 Z"
+                />
+            </g>
+        </svg>
+
+    </svg>
+</div>
+
+
+<script>
+    $('.bg').mousemove(function (e) {
+        var parentOffset = $(this).parent().offset();
+        var svg = document.getElementById('bgArt');
+        var pt = svg.createSVGPoint();
+
+        var relX = (e.pageX - parentOffset.left);
+        var relY = (e.pageY - parentOffset.top);
+
+        pt.x = relX;
+        pt.y = relY;
+        svgP = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+        relX = svgP.x - 50;
+        relY = svgP.y - 50;
+
+
+        $('#techyOverlayMask g').attr('transform', 'translate(' + relX + ',' + relY + ')');
+        $('#helper').attr('transform', 'translate(' + relX + ',' + relY + ')');
+    });
+</script>
+</body>
+
+
+</html>
