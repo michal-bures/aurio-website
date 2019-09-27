@@ -13,5 +13,8 @@ export const HeaderBanner = () => {
 };
 
 const StyledDiv = styled.div`
-  width: 100%
+  position:relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
 `;

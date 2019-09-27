@@ -1,12 +1,19 @@
 import styled from 'styled-components';
 
+const svgBackgroundSize = {
+    width: 3840,
+    height: 600,
+    top: 0,
+    left: -1400,
+};
+
 export function SvgBackground() {
     return (
         <StyledSvg
             xmlns="http://www.w3.org/2000/svg"
             height="600"
-            className="bannerSvg"
             version="1.1"
+            viewBox={`${svgBackgroundSize.left} ${svgBackgroundSize.top} ${svgBackgroundSize.width} ${svgBackgroundSize.height}`}
         >
             <defs>
                 <linearGradient
@@ -22,7 +29,7 @@ export function SvgBackground() {
                     <stop offset="1" stopColor="#fff" stopOpacity="0"/>
                 </linearGradient>
             </defs>
-            <path fill="#003380" d="M-1440 0H2400V600H-1440z"/>
+            <path fill="#003380" d="M -1440 0H2400V600H-1440z"/>
             <path fill="#fff" fillOpacity="0.035" d="M578 0l318.8 600h1503V2.4z"/>
             <path fill="url(#a)" d="M1494 0L356 600h1138z"/>
             <g>
@@ -52,6 +59,10 @@ export function SvgBackground() {
 }
 
 
-export const StyledSvg= styled.svg`
-  width: 100%
+export const StyledSvg = styled.svg`
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: ${svgBackgroundSize.width}px;
+    margin-left: ${-(svgBackgroundSize.width/2)}px;
 `;
